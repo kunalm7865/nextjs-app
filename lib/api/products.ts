@@ -4,7 +4,7 @@ import { Product } from "@/types/product";
 
 // GET all products
 export async function getProducts() {
-  return serverFetch<Product[]>("/products", { method: "GET", revalidateSeconds: 120 });
+  return serverFetch<Product[]>("/api/v1/products/products", { method: "GET", revalidateSeconds: false });
 }
 
 // GET product by ID

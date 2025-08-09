@@ -1,4 +1,5 @@
 // app/layout.tsx
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "@/styles/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";

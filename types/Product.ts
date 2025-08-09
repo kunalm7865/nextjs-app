@@ -1,13 +1,9 @@
 // types/product.ts
 export interface Product {
   id: number;
-  title: string;
-  price: number;
-  description: string;
+  product_name: string;
   category: string;
-  image: string;
-  rating?: {
-    rate: number;
-    count: number;
-  };
+  auction_date: string; // YYYY-MM-DD
+  start_time: string;   // HH:mm:ss
+  end_time: string;     // HH:mm:ss
 }

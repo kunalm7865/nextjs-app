@@ -1,19 +1,53 @@
 // components/Header.tsx
 import Link from "next/link";
+import { FC } from "react";
 
-export default function Header() {
+const Header: FC = () => {
   return (
-    <header className="site-header">
-      <div className="container">
-        <h1 className="logo"><Link href="/">My Products</Link></h1>
-        <nav>
-          <ul className="nav">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/products">Products</Link></li>
-            <li><Link href="/about">About us</Link></li>
-          </ul>
-        </nav>
-      </div>
+    <header>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+        <div className="container">
+          <Link href="/" className="navbar-brand fw-bold">
+            My Products
+          </Link>
+
+          {/* Mobile toggle */}
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          {/* Menu */}
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <Link href="/" className="nav-link">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/products" className="nav-link">
+                  Products
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/about" className="nav-link">
+                  About Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
   );
-}
+};
+
+export default Header;
